@@ -1,4 +1,4 @@
 - [首頁](home.md)
-- [LeetCode 筆記](leetcode.md)
+- [LeetCode 筆記](leetcode-dp.md)
 - [系統設計](posts/system-design.md)
 - [關於我](about.md)
