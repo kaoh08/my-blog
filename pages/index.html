@@ -9,7 +9,23 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md-docs@1"></script>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zero-md-docs@1/dist/default.min.css" />
     <style>
-      .zmdocs-menu ul li a {        
+      /* 1. 外層 li：對應你的 .flex-parent */
+      .zmdocs-menu ul li {
+        display: flex;          /* 啟動 Flexbox */
+        align-items: center;    /* 垂直置中 (align-items: center) */
+        width: 100%;            /* 確保容器有寬度 */
+        
+        /* 為了不讓內容撐爆版面，建議加上這行，但視情況可選 */
+        overflow: hidden;       
+      }
+      
+      /* 2. 內層 a：對應你的 .long-and-truncated-with-child-corrected + h2 */
+      .zmdocs-menu ul li a {
+        /* --- 這一區是讓 Flex 子元素可以被截斷的關鍵 --- */
+        flex: 1;                /* 佔滿剩餘空間 */
+        min-width: 0;           /* ★ 魔法語法：強制允許 Flex 項目縮到比內容還小 */
+        
+        /* --- 這一區是文字截斷三兄弟 --- */
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
