@@ -9,25 +9,22 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md-docs@1"></script>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zero-md-docs@1/dist/default.min.css" />
     <style>
-      /* 對應範例的 .flex-parent */
-      .zmdocs-menu ul {
-        display: flex;          /* 開啟 Flex */
-        align-items: center;    /* 垂直置中 */
-        width: 100%;            /* 確保 li 佔滿寬度 */
-        overflow: hidden;       /* 避免被撐開的保險 */
-      }
-
+      /* 1. 父層 (對應 .flex-parent) */
       .zmdocs-menu ul li {
-        flex: 1;                /* 佔滿剩餘空間 */
-        min-width: 0;           /* ★ 關鍵：允許縮小，沒這行就不會截斷 */
+        display: flex;       /* 啟動 Flex 模式 */
+        align-items: center; /* 處理垂直置中 */
+        width: 100%;         /* 確保這一行有寬度 */
+        overflow: hidden;    /* 避免超出 */
       }
       
-      /* 對應範例的 .long-and-truncated-with-child-corrected */
+      /* 2. 子層 (對應 .long-and-truncated) */
       .zmdocs-menu ul li a {
-        /* 截斷三兄弟 */
-        white-space: nowrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
+        flex: 1;             /* 佔滿剩餘空間 */
+        min-width: 0;        /* ★ 核心關鍵：允許 Flex 子元素縮小，沒有這行就不會出現 ... */
+        
+        white-space: nowrap;     /* 不換行 */
+        overflow: hidden;        /* 超出隱藏 */
+        text-overflow: ellipsis; /* 顯示 ... */
       }
     </style>
   </head>
