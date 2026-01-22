@@ -9,23 +9,17 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md-docs@1"></script>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zero-md-docs@1/dist/default.min.css" />
     <style>
-      .zmdocs-menu ul li {
-        /* 確保父層是 Flex 且垂直置中 */
-        display: flex;
-        align-items: center; 
-        /* 避免 Flex 子元素被內容撐爆 */
-        overflow: hidden; 
-      }
-      
       .zmdocs-menu ul li a {
-        display: block; /* 或 inline-block */
+        display: flex;
+        align-items: center;
+        
+        width: 100%;
+        min-width: 0;
+        
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
-        /* 關鍵：Flex 子元素要截斷，通常需要設這個 */
-        flex: 1; 
-        min-width: 0; 
+
       }
     </style>
   </head>
