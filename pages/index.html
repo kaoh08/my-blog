@@ -9,24 +9,12 @@
     <script type="module" src="https://cdn.jsdelivr.net/npm/zero-md-docs@1"></script>    
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/zero-md-docs@1/dist/default.min.css" />
     <style>
-      /* 1. 父層 (對應 .flex-parent) */
-      .zmdocs-menu ul li {
-        display: flex;       /* 啟動 Flex 模式 */
-        align-items: center; /* 處理垂直置中 */
-        width: 100%;         /* 確保這一行有寬度 */
-        overflow: hidden;    /* 避免超出 */
-      }
-      
-      /* 2. 子層 (對應 .long-and-truncated) */
       .zmdocs-menu ul li a {
-        flex: 1;             /* 佔滿剩餘空間 */
-        min-width: 0;        /* ★ 核心關鍵：允許 Flex 子元素縮小，沒有這行就不會出現 ... */
-        
+        display: block;
         white-space: nowrap;     /* 不換行 */
         overflow: hidden;        /* 超出隱藏 */
         text-overflow: ellipsis; /* 顯示 ... */
-
-        display: block;
+        line-height: 2.5rem;
       }
     </style>
   </head>
