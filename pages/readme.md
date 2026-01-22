@@ -1,4 +1,4 @@
 - [首頁](home.md)
 - [LeetCode 筆記](leetcode-dp.md)
-- [系統設計](posts/system-design.md)
+- [系統設計系統設計系統設計系統設計系統設計系統設計系統設計](posts/system-design.md)
 - <a href="https://github.com/kaoh08/my-blog/" target="_blank">Visit Github Repo</a>
